@@ -1,3 +1,4 @@
+<?php $Url = get_template_directory_uri(); ?>
 <?php
 /**
  * The template for displaying the footer
@@ -51,9 +52,9 @@
     </div>
 </footer>
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-
+<script type='text/javascript' src='<?php echo $Url ?>/js/jquery.min.js?ver=2'></script>
+<script type='text/javascript' src='<?php echo $Url ?>/js/app.js?ver=2'></script>
 </body>
 
 </html>
