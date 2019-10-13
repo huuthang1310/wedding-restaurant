@@ -1,0 +1,135 @@
+/**
+Custom css here
+*/
+
+#incentives {
+    padding: 40px 0px 20px;
+}
+
+.sectionTitle,
+#services .service__title {
+    text-transform: capitalize;
+}
+
+#services {
+    padding: 60px 0;
+}
+
+.footer__short {
+    padding: 40px 0px !important;
+}
+
+#services .serviceItem__title {
+    padding: 9px 0px;
+}
+
+#services .serviceItem__title h2 {
+    font-size: 25px;
+}
+
+#header .navigationSearch .inputSearch__input {
+    cursor: pointer;
+}
+
+.slidersContainer .slidersContainer__item .nav .nav-prev,
+.slidersContainer .slidersContainer__item .nav .nav-next {
+    color: #333333;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#feedBackNews {
+    padding: 60px 0px;
+}
+
+.content img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#navigationSpecial .navigationToggle__button {
+    right: 4px;
+    top: 5px;
+}
+
+#sliders p.description,
+#incentives .incentive__info .info__description,
+#services .serviceItem .overlay__description,
+.imageBox__info .info__description {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+#footer .navigationFooter ul>li>a:hover {
+    text-decoration: none;
+}
+
+#feedBackNews .news__posts .post__image {
+    height: auto !important;
+}
+
+h2.info__title a {
+    color: #333;
+    text-decoration: none;
+}
+
+#header .header__logo img {
+    width: 130px;
+}
+
+
+/* More */
+
+
+/* Enter Your Custom CSS Here */
+
+.bv-input {
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    padding: 2px 5px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.bv-btn {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 25px;
+    background: #a71f23;
+    border: 1px solid #a71f23;
+    color: #fff;
+}
+
+.bv-btn:hover {
+    background: #802629;
+}
+
+.wpcf7-form-control-wrap {
+    margin-bottom: 10px;
+    display: block;
+}
+
+span.wpcf7-not-valid-tip {
+    font-size: 12px;
+}
+
+#footer .footer__logo img {
+    height: auto;
+    width: 100%;
+}
+
+#footer .footer__logo {
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: inherit !important;
+    }
+}
+
+#incentives .incentive__info .info__title {
+    min-height: 80px;
+}
+
+#contactForm {
+    padding: 90px 0px;
+}
