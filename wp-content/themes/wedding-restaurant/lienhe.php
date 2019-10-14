@@ -25,51 +25,7 @@ get_header();
                     Email: info@bachviet.com.vn
                 </div>
                 <div class="col-md-8">
-                    <div role="form" class="wpcf7" id="wpcf7-f5446-o1" lang="en-US" dir="ltr">
-                        <div class="screen-reader-response"></div>
-                        <form action="/lien-he/#wpcf7-f5446-o1" method="post" class="wpcf7-form"
-                            novalidate="novalidate">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="5446">
-                                <input type="hidden" name="_wpcf7_version" value="5.0.5">
-                                <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5446-o1">
-                                <input type="hidden" name="_wpcf7_container_post" value="0">
-                            </div>
-                            <h3>Liên hệ</h3>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name"
-                                            value="" size="40"
-                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required bv-input"
-                                            aria-required="true" aria-invalid="false" placeholder="Họ và Tên"></span>
-                                </div>
-                                <div class="col-md-4">
-                                    <span class="wpcf7-form-control-wrap your-email"><input type="email"
-                                            name="your-email" value="" size="40"
-                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email bv-input"
-                                            aria-required="true" aria-invalid="false" placeholder="Email"></span>
-                                </div>
-                                <div class="col-md-4">
-                                    <span class="wpcf7-form-control-wrap your-phone"><input type="text"
-                                            name="your-phone" value="" size="40"
-                                            class="wpcf7-form-control wpcf7-text bv-input" aria-invalid="false"
-                                            placeholder="Số điện thoại"></span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message"
-                                            cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea bv-input"
-                                            aria-invalid="false" placeholder="Nội dung"></textarea></span>
-                                </div>
-                            </div>
-                            <p><input type="submit" value="Gửi" class="wpcf7-form-control wpcf7-submit bv-btn"><span
-                                    class="ajax-loader"></span></p>
-                            <div class="wpcf7-response-output wpcf7-display-none"></div>
-                        </form>
-                    </div>
-
+                    <?php echo do_shortcode('[contact-form-7 id="23" title="Untitled"]') ?>
                 </div>
             </div>
         </div>
