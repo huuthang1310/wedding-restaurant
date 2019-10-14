@@ -2,6 +2,26 @@
 Custom css here
 */
 
+.wpcf7-form-control-wrap input {
+    width: 100%;
+}
+
+.s_noidung label {
+    width: 100%;
+}
+
+label {
+    font-family: 'Judson', serif;
+}
+
+.wpcf7-textarea {
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    padding: 2px 5px;
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+}
+
 #incentives {
     padding: 40px 0px 20px;
 }
@@ -132,4 +152,13 @@ span.wpcf7-not-valid-tip {
 
 #contactForm {
     padding: 90px 0px;
+}
+
+.wpcf7-submit {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 25px;
+    background: #a71f23;
+    border: 1px solid #a71f23;
+    color: #fff;
 }
