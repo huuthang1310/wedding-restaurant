@@ -8,7 +8,6 @@
  *
  * @package Wedding_Restaurant
  */
-
 ?>
 
 <footer class="block">
