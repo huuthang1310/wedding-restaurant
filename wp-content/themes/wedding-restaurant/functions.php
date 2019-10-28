@@ -159,3 +159,72 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+add_action( 'wp_enqueue_scripts', 'wedding_restaurant_register_style');
+
+function wedding_restaurant_register_style(){
+
+	$css = get_template_directory_uri() . '/css';
+		
+	wp_register_style( 'wedding_restaurant_bootstrap.min', $css . '/bootstrap.min.css', array(), '1.0');
+	wp_enqueue_style('wedding_restaurant_bootstrap.min');
+    
+    wp_register_style( 'wedding_restaurant_animate', $css . '/animate.css', array(), '1.0');
+    wp_enqueue_style('wedding_restaurant_animate');
+    
+    
+  
+    wp_register_style( 'wedding_restaurant_owl-carosel', $css . '/owl.carousel.css', array(), '1.0');
+    wp_enqueue_style('wedding_restaurant_owl-carosel');
+	
+    wp_register_style( 'wedding_restaurant_owl-carosel2', $css . '/owl.theme.default.css', array(), '1.0');
+	wp_enqueue_style('wedding_restaurant_owl-carosel2');
+		
+    wp_register_style( 'wedding_restaurant_owl-carosel3', $css . '/owl.transitions.css', array(), '1.0');
+	wp_enqueue_style('wedding_restaurant_owl-carosel3');
+
+	wp_register_style( 'wedding_restaurant_fontaw', $css . '/font-awesome.min.css', array(), '1.0');
+	wp_enqueue_style('wedding_restaurant_fontaw');
+	
+	
+	wp_register_style( 'wedding_restaurant_magnific-popup', $css . '/magnific-popup.css', array(), '1.0');
+	wp_enqueue_style('wedding_restaurant_magnific-popup');
+
+
+	wp_register_style( 'wedding_restaurant_style-core', $css . '/style.css', array(), '1.1');
+    wp_enqueue_style('wedding_restaurant_style-core');
+
+    wp_register_style( 'wedding_restaurant_custom', $css . '/custom.css', array(), '1.0');
+    wp_enqueue_style('wedding_restaurant_custom');
+    
+    wp_register_style( 'wedding_restaurant_style', $css. '/css.css', array(), '1.0');
+    wp_enqueue_style('wedding_restaurant_style');
+}
+
+add_action( 'wp_enqueue_scripts', 'wedding_restaurant_register_js');
+function wedding_restaurant_register_js(){
+    $js = get_template_directory_uri() . '/js';
+    
+    
+	
+    wp_register_script( 'wedding_restaurant_jquery-2.2.4.min', $js . '/jquery-2.2.4.min.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_jquery-2.2.4.min');
+	wp_register_script( 'wedding_restaurant_popper.min', $js . '/popper.min.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_popper.min');
+wp_register_script( 'wedding_restaurant_bootstrap.min', $js . '/bootstrap.min.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_bootstrap.min');
+	wp_register_script( 'wedding_restaurant_jquery.magnific-popup.min', $js . '/jquery.magnific-popup.min.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_jquery.magnific-popup.min');
+
+	wp_register_script( 'wedding_restaurant_jquery.owl.carousel.min', $js . '/owl.carousel.min.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_jquery.owl.carousel.min');
+
+
+
+	wp_register_script( 'wedding_restaurant_script', $js . '/script.js', array(), '1.0');
+	wp_enqueue_script('wedding_restaurant_script');
+
+
+	
+
+}
