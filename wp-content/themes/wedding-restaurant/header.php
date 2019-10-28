@@ -68,8 +68,6 @@
     <div class="financity-body-outer-wrapper ">
         <div class="financity-body-wrapper clearfix  financity-with-transparent-navigation financity-with-frame">
             <div class="financity-header-background-transparent">
-                <?php get_sidebar('top-menu'); ?>
-
                 <header class="financity-header-wrap financity-header-style-bar  financity-style-left">
                     <div class="financity-header-background"></div>
                     <div class="financity-header-container clearfix  financity-container">
@@ -83,6 +81,6 @@
                             </div>
                         </div>
                     </div>
-                    <?php get_sidebar('main-menu'); ?>
+                    <?php get_template_part( 'module/module-1', 'menu' ); ?>
                 </header>
             </div>

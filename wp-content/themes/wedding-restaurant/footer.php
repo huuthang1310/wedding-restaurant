@@ -1,4 +1,4 @@
-<?php $Url1 = get_template_directory_uri(); ?>
+<?php $Url = get_template_directory_uri(); ?>
 <footer>
     <div class="financity-footer-wrapper ">
         <div class="financity-footer-container financity-container clearfix">
@@ -40,38 +40,17 @@
 
 </div>
 
+<script src="<?php echo $Url ?>/js/jquery.min.js"></script>
+<script src="<?php echo $Url ?>/plugins/goodlayers-core/include/js/page-builder.js"></script>
 
 <script>
 jQuery(document).ready(function() {
     jQuery(".menu-item").removeClass("current-menu-item");
     jQuery(".menu-item-home").addClass("current-menu-item");
     //jQuery("#exampleModal").dialog();
-
-    modal.style.display = "block";
 });
 
 // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("btn-close")[0];
-var close = document.getElementsByClassName("btn-close")[1];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-close.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
 
 <?php wp_footer(); ?>

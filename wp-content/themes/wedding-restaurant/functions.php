@@ -115,11 +115,7 @@ function studentservicesplus_theme_register_js(){
     wp_register_script( 'studentservicesplus_theme_goodlayers_core_plugins_combine', $js_plugins_goodlayers_core_plugins_combineUrl . '/script.js', array(), '1.0');
     wp_enqueue_script('studentservicesplus_theme_goodlayers_core_plugins_combine');
 
-    $js_plugins_goodlayers_core_include_jsUrl = get_template_directory_uri() . '/plugins/goodlayers-core/include/js';
-
-    wp_register_script( 'studentservicesplus_theme_js_plugins_goodlayers_core_include', $js_plugins_goodlayers_core_include_jsUrl . '/page-builder.js', array(), '1.0');
-    wp_enqueue_script('studentservicesplus_theme_js_plugins_goodlayers_core_include');
-
+    
     $js_plugins_revslider_public_assets_js_extensionsUrl = get_template_directory_uri() . '/plugins/revslider/public/assets/js/extensions';
 
     wp_register_script( 'studentservicesplus_theme_revolution_extension_slideanims_min', $js_plugins_revslider_public_assets_js_extensionsUrl . '/revolution.extension.slideanims.min.js', array(), '1.0');
