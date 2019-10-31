@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <p class="text-uppercase f-11 p-t-15 p-b-15">2019 Designed by <a
-                            href="http://templatecs.com/demo/template/deliki/html/home.html#" class="f-11">them3x</a> .
+                            href="<?php echo get_site_url(); ?>/home" class="f-11">them3x</a> .
                         All rights reserved</p>
                 </div>
             </div>
