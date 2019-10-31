@@ -10,51 +10,27 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wedding-restaurant' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wedding-restaurant' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wedding-restaurant' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$wedding_restaurant_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wedding-restaurant' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wedding_restaurant_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div id="wrap-body">
+			<section class="page-title">
+				<div class="card bg-offset bg-fixed h250" data-image-src="<?php echo get_template_directory_uri()?>/images/kawin-haraffsai-75421.jpg" style="background-image: url(&quot;<?php echo get_template_directory_uri()?>/images/kawin-haraffsai-75421.jpg&quot;);">
+					<div class="card-img-overlay">
+						<div class="container">
+							<h1>error 404</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="text-center">
+				<div class="container">
+					<h2 class="d-flex text-center justify-content-center">
+						<span class="f-150 m-0 f-weight-800 m-r-15 l-height-1">4</span>
+						<i class="fa fa-frown-o f-150 m-r-15 color-d90000"></i>
+						<span class="f-150 m-0 f-weight-800 l-height-1">4</span>
+					</h2>
+					<h5 class="f-30 m-t-30 color-8">The page not found</h5>
+				</div>
+			</section>
+		</div>
 
 <?php
 get_footer();
