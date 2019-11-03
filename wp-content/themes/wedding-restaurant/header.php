@@ -40,4 +40,4 @@
     <div class="preloader" style="display: none;">
         <i class="fa fa-spinner" style="display: none;"></i>
     </div>
-	<?php get_template_part( 'module/module-1', 'menu' ); ?>
+	<?php get_template_part( 'module/module-wp/module-1', 'menu' ); ?>
