@@ -19,7 +19,7 @@
                                         href="<?php echo get_site_url(); ?>/reservations">reservations</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo get_site_url(); ?>/home">blog</a>
+                                    <a href="<?php echo get_site_url(); ?>/blog">blog</a>
                                     <ul class="sub-menu">
                                         <li><a
                                                 href="<?php echo get_site_url(); ?>/blog">blog_list</a>
