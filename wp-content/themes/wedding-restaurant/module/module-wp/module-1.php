@@ -12,40 +12,13 @@
                         <div class="menu-wrap">
                             <div class="menu-btn-close"></div>
                             <ul class="menu">
-                                <li><a href="<?php echo get_site_url(); ?>/home">home</a></li>
-                                <li><a href="<?php echo get_site_url(); ?>/about">about</a></li>
-                                <li><a href="<?php echo get_site_url(); ?>/menu">menu</a></li>
-                                <li><a
-                                        href="<?php echo get_site_url(); ?>/reservations">reservations</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo get_site_url(); ?>/blog">blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a
-                                                href="<?php echo get_site_url(); ?>/blog">blog_list</a>
-                                        </li>
-                                        <li><a
-                                                href="<?php echo get_site_url(); ?>/single-blog">single_blog</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="<?php echo get_site_url(); ?>/home">pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a
-                                                href="<?php echo get_site_url(); ?>/404-2">error_404</a>
-                                        </li>
-                                        <li><a
-                                                href="<?php echo get_site_url(); ?>/contact">contact</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                            <?php wp_nav_menu( array( 'li' => '%3$s' ) ); ?>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="col-lg-2 d-none d-lg-block">
-                    <a href="<?php echo get_site_url(); ?>/home" class="btn float-right">Book a
+                    <a href="<?php echo get_site_url(); ?>/reservations" class="btn float-right">Book a
                         table</a>
                 </div>
             </div>
