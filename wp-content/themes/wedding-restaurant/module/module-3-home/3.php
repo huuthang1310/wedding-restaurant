@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Module 18</title>
+    <title>Module 3</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Owl-coursel -->
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
-<?php include '18-content.php' ?>
+<?php include '3-content.php' ?>
 <!-- jQuery -->
 <script src="js/jquery-2.2.4.min.js"></script>
 <!-- Bootstrap -->
