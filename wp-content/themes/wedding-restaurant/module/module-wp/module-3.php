@@ -6,10 +6,12 @@
             <h4 class="card-subtitle f-30 f-sm-25 m-b-15">Welcome to</h4>
             <h2 class="f-40 f-sm-30 line-default">Deli<strong class="main-color">ki</strong> Restaurant</h2>
         </div>
-        <p class="max-w-800 text-center m-b-60">Lorem ipsum dolor sit amet consectetur adipisicing labore et dolore
-            magna aliqua uat veniama icing elit sed do eiusmoLorem ipsum dolor sit amet consectetur adipisicing
-            labor sit amet</p>
         <div class="row row-15">
+            <!-- Get post News Query -->
+            <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=1&post_type=welcome_to_home'); ?>
+            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
             <div class="col-md-4">
                 <div class="card box-shadow-sm border-1x">
                     <div class="icn icn-70 border-dotted card-icon m-b-5">
@@ -17,15 +19,21 @@
                     </div>
                     <div class="card-body p-t-20">
                         <h3 class="card-title">
-                            <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Food &amp; Wine</a>
+                            <a href="<?php echo the_permalink(  ); ?>"><?php echo the_title(  ); ?></a>
                         </h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet constetur adipisicing labore etan dolmagna
-                            aliqua uat veniama icingmod</p>
-                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#" class="btn">read
+                        <p class="card-text"><?php echo the_content(  ); ?></p>
+                        <a href="<?php echo the_permalink(  ); ?>" class="btn">read
                             more</a>
                     </div>
                 </div>
             </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <!-- Get post News Query -->
+            <!-- Get post News Query -->
+            <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=1&post_type=welcome_to_home&offset=1&3'); ?>
+            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
             <div class="col-md-4">
                 <div class="card main-bg box-shadow-sm color-f">
                     <div class="icn icn-70 border-dotted card-icon m-b-5">
@@ -33,15 +41,21 @@
                     </div>
                     <div class="card-body p-t-20">
                         <h3 class="card-title">
-                            <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Beer Club</a>
+                            <a href="<?php echo the_permalink(  ); ?>"><?php echo the_title(  ); ?></a>
                         </h3>
-                        <p class="card-text color-f">Lorem ipsum dolor sit amet conseetur adipisicing labore etan
-                            dolmagna aliqua uat veniama icingmod</p>
-                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#" class="btn bg-f">read
+                        <p class="card-text"><?php echo the_content(  ); ?></p>
+                        <a  class="btn bg-f" href="<?php echo the_permalink(  ); ?>" class="btn">read
                             more</a>
                     </div>
                 </div>
             </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <!-- Get post News Query -->
+            <!-- Get post News Query -->
+            <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=1&post_type=welcome_to_home&offset=1&2'); ?>
+            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
             <div class="col-md-4">
                 <div class="card box-shadow-sm border-1x">
                     <div class="icn icn-70 border-dotted card-icon m-b-5">
@@ -49,16 +63,16 @@
                     </div>
                     <div class="card-body p-t-20">
                         <h3 class="card-title">
-                            <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Event &amp;
-                                Wedding</a>
+                            <a href="<?php echo the_permalink(  ); ?>"><?php echo the_title(  ); ?></a>
                         </h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet constetur adipisicing labore etan dolmagna
-                            aliqua uat veniama icingmod</p>
-                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#" class="btn">read
+                        <p class="card-text"><?php echo the_content(  ); ?></p>
+                        <a href="<?php echo the_permalink(  ); ?>" class="btn">read
                             more</a>
                     </div>
                 </div>
             </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <!-- Get post News Query -->
         </div>
     </div>
 </section>

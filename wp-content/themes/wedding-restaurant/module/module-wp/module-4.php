@@ -12,51 +12,21 @@
                                     <h4 class="card-subtitle">Sale up to 20%</h4>
                                     <h2 class="line-default f-30">week's special</h2>
                                 </div>
+                                <!-- Get post News Query -->
+                                <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=weeks-special'); ?>
+                                <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
                                 <div class="menu-food">
                                     <h4 class="d-flex">
-                                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Tomato
-                                            Bruscgetta</a>
+                                        <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
                                         <span class="col"></span>
-                                        <span>$9.00</span>
+                                        <span><?php the_field('money') ?></span>
                                     </h4>
-                                    <p>Tomatoes, Olive Oil, Cheese</p>
+                                    <p><?php the_field('content') ?></p>
                                 </div>
-                                <div class="menu-food">
-                                    <h4 class="d-flex">
-                                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Gnocchi con
-                                            speck</a>
-                                        <span class="col"></span>
-                                        <span>$9.00</span>
-                                    </h4>
-                                    <p>Tomatoes, Olive Oil, Cheese</p>
-                                </div>
-                                <div class="menu-food">
-                                    <h4 class="d-flex">
-                                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Crema di
-                                            funghi</a>
-                                        <span class="col"></span>
-                                        <span>$9.00</span>
-                                    </h4>
-                                    <p>Tomatoes, Olive Oil, Cheese</p>
-                                </div>
-                                <div class="menu-food">
-                                    <h4 class="d-flex">
-                                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Tomato
-                                            salad</a>
-                                        <span class="col"></span>
-                                        <span>$9.00</span>
-                                    </h4>
-                                    <p>Tomatoes, Olive Oil, Cheese</p>
-                                </div>
-                                <div class="menu-food">
-                                    <h4 class="d-flex">
-                                        <a href="http://templatecs.com/demo/template/deliki/html/home.html#">Cheese
-                                            burger</a>
-                                        <span class="col"></span>
-                                        <span>$9.00</span>
-                                    </h4>
-                                    <p>Tomatoes, Olive Oil, Cheese</p>
-                                </div>
+                                <?php endwhile; wp_reset_postdata(); ?>
+                                <!-- Get post News Query -->
                             </div>
                         </div>
                     </div>
