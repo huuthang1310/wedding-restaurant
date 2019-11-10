@@ -21,7 +21,6 @@
             </div>
             <?php endwhile; wp_reset_postdata(); ?>
             <!-- Get post News Query -->
-
         </div>
     </div>
 </section>

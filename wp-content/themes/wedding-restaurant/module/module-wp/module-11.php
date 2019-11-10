@@ -1,39 +1,25 @@
 <section data-image-src="<?php echo get_template_directory_uri()?>/images/food-3327977_960_720.png"
-        class="bg-offset bg-size-70 p-t-0"
-        style="background-image: url(&quot;<?php echo get_template_directory_uri()?>/images/food-3327977_960_720.png&quot;);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-lg-6">
-                    <div class="card card-5x m-t-150 bg-f p-40 p-xs-30 relative box-shadow-sm">
-                        <div class="card-body">
-                            <h2 class="card-title">About Deli<strong class="main-color">ki</strong> </h2>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing labore edolore</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitationipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit</p>
-                            <div>
-                                <img class="card-img-top w180 m-t-30"
-                                    src="<?php echo get_template_directory_uri()?>/images/mt-0951-text-img.png"
-                                    alt="image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-lg-4 f-right">
-                    <div class="p-20 bg-f5 m-t-md-50 text-center">
-                        <div class="bg-f p-30 quote-after">
-                            <img src="<?php echo get_template_directory_uri()?>/images/us27.jpg" alt="image"
-                                class="w150 rad-100">
-                            <p class="m-t-20 italic line-default"> <i class="fa fa-quote-left m-r-5 f-30 color-9"></i>
-                                Lorem ipsum dolor sit amet consecsed d do eiusmod temp incidunt olore magna aliqu Lorem
-                                ipsum dolor sit amet et dincidunt ut laboliqu</p>
-                            <h6 class="f-16 f-bold">Jan Bold</h6>
-                        </div>
+    class="bg-offset bg-size-70 p-t-0"
+    style="background-image: url(&quot;<?php echo get_template_directory_uri()?>/images/food-3327977_960_720.png&quot;);">
+    <div class="container">
+        <div class="row">
+            <!-- Get post News Query -->
+            <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=1&post_type=about_page'); ?>
+            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+            <div class="col-md-12 col-lg-12">
+                <div class="card card-5x m-t-150 bg-f p-40 p-xs-30 relative box-shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">About Deli<strong class="main-color">ki</strong> </h2>
+                        <h4><?php echo the_title(  ); ?></h4>
+                        <p class="card-text"><?php echo the_content(  ); ?></p>
                     </div>
                 </div>
             </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <!-- Get post News Query -->
+           
         </div>
-    </section>
+    </div>
+</section>

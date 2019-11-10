@@ -15,7 +15,6 @@
 					<div class="block-title">
 						<h4 class="card-subtitle">Welcome to</h4>
 						<h2 class="line-default">Discovery menu</h2>
-						<p class="max-w-800 text-center m-b-60">Lorem ipsum dolor sit amet consectetur adipisicing  labore</p>
 					</div>
 					<div class="row row-15">
 						<div class="col-md-6">
@@ -24,47 +23,22 @@
 									<div class="title-menu">
 										<h3>Sea food</h3>
 									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Boneless Buffalo Wings</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Mozzarella Moons</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
 									<img src="<?php echo get_template_directory_uri()?>/images/seafood-2187507_960_720.jpg" alt="image" class="m-t-25">
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Outrageous Potato Skins</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Soup &amp; Garden Side Salad</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">BBQ Chicken Wrap</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									<!-- Get post News Query -->
+                                    <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=salad'); ?>
+                                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+                                    <div class="menu-food">
+                                        <h4 class="d-flex">
+                                            <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
+                                            <span class="col"></span>
+                                            <span><?php the_field('money') ?></span>
+                                        </h4>
+                                        <p><?php the_field('content') ?></p>
+                                    </div>
+                                    <?php endwhile; wp_reset_postdata(); ?>
+                                    <!-- Get post News Query -->
 								</div>
 							</div>
 						</div>
@@ -74,47 +48,24 @@
 									<div class="title-menu">
 										<h3>Salad</h3>
 									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Boneless Buffalo Wings</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									
 									<img src="<?php echo get_template_directory_uri()?>/images/restaurant-1092728_960_720.jpg" alt="image" class="m-t-25">
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Mozzarella Moons</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Outrageous Potato Skins</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Soup &amp; Garden Side Salad</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">BBQ Chicken Wrap</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									<!-- Get post News Query -->
+                                    <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=sea-food'); ?>
+                                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+                                    <div class="menu-food">
+                                        <h4 class="d-flex">
+                                            <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
+                                            <span class="col"></span>
+                                            <span><?php the_field('money') ?></span>
+                                        </h4>
+                                        <p><?php the_field('content') ?></p>
+                                    </div>
+                                    <?php endwhile; wp_reset_postdata(); ?>
+                                    <!-- Get post News Query -->
+									
 								</div>
 							</div>
 						</div>
@@ -124,47 +75,23 @@
 									<div class="title-menu">
 										<h3>Pizza</h3>
 									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Boneless Buffalo Wings</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Mozzarella Moons</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Outrageous Potato Skins</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Soup &amp; Garden Side Salad</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+								
 									<img src="<?php echo get_template_directory_uri()?>/images/pizza-2000614_960_720.jpg" alt="image" class="m-t-25">
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">BBQ Chicken Wrap</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									<!-- Get post News Query -->
+                                    <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=pizza'); ?>
+                                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+                                    <div class="menu-food">
+                                        <h4 class="d-flex">
+                                            <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
+                                            <span class="col"></span>
+                                            <span><?php the_field('money') ?></span>
+                                        </h4>
+                                        <p><?php the_field('content') ?></p>
+                                    </div>
+                                    <?php endwhile; wp_reset_postdata(); ?>
+                                    <!-- Get post News Query -->
 								</div>
 							</div>
 						</div>
@@ -174,47 +101,24 @@
 									<div class="title-menu">
 										<h3>Soup</h3>
 									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Boneless Buffalo Wings</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									
 									<img src="<?php echo get_template_directory_uri()?>/images/meal-918639_1280.jpg" alt="image" class="m-t-25">
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Mozzarella Moons</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Outrageous Potato Skins</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Soup &amp; Garden Side Salad</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">BBQ Chicken Wrap</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									<!-- Get post News Query -->
+                                    <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=soup'); ?>
+                                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+                                    <div class="menu-food">
+                                        <h4 class="d-flex">
+                                            <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
+                                            <span class="col"></span>
+                                            <span><?php the_field('money') ?></span>
+                                        </h4>
+                                        <p><?php the_field('content') ?></p>
+                                    </div>
+                                    <?php endwhile; wp_reset_postdata(); ?>
+                                    <!-- Get post News Query -->
+								
 								</div>
 							</div>
 						</div>
@@ -224,47 +128,24 @@
 									<div class="title-menu">
 										<h3>Desert</h3>
 									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Boneless Buffalo Wings</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Mozzarella Moons</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+					
 									<img src="<?php echo get_template_directory_uri()?>/images/cake-1868788_960_720.jpg" alt="image" class="m-t-25">
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Outrageous Potato Skins</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">Soup &amp; Garden Side Salad</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
-									<div class="menu-food">
-										<h4 class="d-flex">
-											<a href="#">BBQ Chicken Wrap</a>
-											<span class="col"></span>
-											<span>$9.00</span>
-										</h4>
-										<p>Tomatoes, Olive Oil, Cheese</p>
-									</div>
+									<!-- Get post News Query -->
+                                    <?php $getposts = new WP_query(); $getposts->query('post_status=publish&showposts=10&post_type=discovery_menu&category_menu=desert'); ?>
+                                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+                                    <div class="menu-food">
+                                        <h4 class="d-flex">
+                                            <a href="<?php echo the_permalink(  ); ?>"><?php the_field('food') ?></a>
+                                            <span class="col"></span>
+                                            <span><?php the_field('money') ?></span>
+                                        </h4>
+                                        <p><?php the_field('content') ?></p>
+                                    </div>
+                                    <?php endwhile; wp_reset_postdata(); ?>
+                                    <!-- Get post News Query -->
+								
 								</div>
 							</div>
 						</div>

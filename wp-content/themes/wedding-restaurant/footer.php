@@ -10,7 +10,7 @@
  */
 ?>
 
-<?php get_template_part( 'module/module-wp/module-wp-9', 'footer' ); ?>
+<?php get_template_part( 'module/module-wp/module-9', 'footer' ); ?>
 <!-- jQuery -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.2.4.min.js"></script>
 <!-- Bootstrap -->
